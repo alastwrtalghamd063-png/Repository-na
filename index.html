@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أرامكو للاستثمار - لوحة التحكم</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        :root {
+            --primary: #4d7cfe;
+            --primary-container: #dce1ff;
+            --on-primary-container: #001259;
+            --surface: #f8f9ff;
+            --on-surface: #1a1c1e;
+            --surface-container: #eff0f7;
+            --outline: #74777f;
+        }
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            background-color: var(--surface);
+            color: var(--on-surface);
+            margin: 0;
+            padding-bottom: 80px;
+        }
+        .header-gradient {
+            background: linear-gradient(135deg, #4d7cfe 0%, #2563eb 100%);
+            border-radius: 0 0 40px 40px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .action-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top App Bar -->
+    <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100 px-4 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-lg">account_balance_wallet</span>
+            </div>
+            <h1 class="text-lg font-bold text-blue-800">Aramco Invest</h1>
+        </div>
+        <div class="flex items-center gap-2">
+            <button class="p-2 text-gray-500">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div class="bg-blue-50 px-3 py-1 rounded-full flex items-center gap-1 text-[10px] font-bold text-blue-600 border border-blue-100">
+                <span class="material-symbols-outlined text-sm">language</span>
+                <span>عربي</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 px-4">
+        <!-- Hero Balance Card -->
+        <div class="header-gradient p-8 text-white mb-6 shadow-lg shadow-blue-100 relative overflow-hidden">
+            <p class="text-blue-100 text-sm font-medium mb-2">إجمالي الرصيد المتاح</p>
+            <h2 class="text-4xl font-black mb-8">$12,450.00</h2>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <button class="bg-white text-blue-600 py-3 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 action-btn shadow-md">
+                    <span class="material-symbols-outlined text-lg">add_circle</span>
+                    إيداع
+                </button>
+                <a href="withdraw.html" class="bg-blue-800/30 border border-white/20 text-white py-3 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 action-btn">
+                    <span class="material-symbols-outlined text-lg">payments</span>
+                    سحب
+                </a>
+            </div>
+
+            <!-- Decoration -->
+            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="stat-card p-4 flex flex-col items-center">
+                <span class="material-symbols-outlined text-blue-600 mb-2">trending_up</span>
+                <p class="text-[10px] text-slate-400 font-bold mb-1">أرباح اليوم</p>
+                <p class="text-lg font-black text-slate-800">$125.20</p>
+            </div>
+            <div class="stat-card p-4 flex flex-col items-center">
+                <span class="material-symbols-outlined text-green-600 mb-2">group</span>
+                <p class="text-[10px] text-slate-400 font-bold mb-1">عمولة الفريق</p>
+                <p class="text-lg font-black text-slate-800">$45.00</p>
+            </div>
+        </div>
+
+        <!-- Banner / Announcement -->
+        <div class="bg-blue-50 border border-blue-100 rounded-3xl p-5 mb-8 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-white">campaign</span>
+            </div>
+            <div>
+                <h4 class="font-bold text-blue-900 text-sm">مكافآت الترقية</h4>
+                <p class="text-blue-700 text-xs leading-relaxed">احصل على مكافأة تصل إلى $333 عند دعوة 10 أعضاء جدد لـ VIP 1.</p>
+            </div>
+        </div>
+
+        <!-- Main Sections Links -->
+        <div class="grid grid-cols-3 gap-4 mb-10">
+             <a href="tasks.html" class="flex flex-col items-center gap-2">
+                <div class="w-14 h-14 rounded-2xl bg-white shadow-sm border border-gray-100 flex items-center justify-center action-btn">
+                    <span class="material-symbols-outlined text-blue-600 text-2xl">assignment</span>
+                </div>
+                <span class="text-[10px] font-bold text-slate-600">المهام</span>
+            </a>
+            <a href="vip.html" class="flex flex-col items-center gap-2">
+                <div class="w-14 h-14 rounded-2xl bg-white shadow-sm border border-gray-100 flex items-center justify-center action-btn">
+                    <span class="material-symbols-outlined text-orange-500 text-2xl">military_tech</span>
+                </div>
+                <span class="text-[10px] font-bold text-slate-600">VIP</span>
+            </a>
+            <a href="team.html" class="flex flex-col items-center gap-2">
+                <div class="w-14 h-14 rounded-2xl bg-white shadow-sm border border-gray-100 flex items-center justify-center action-btn">
+                    <span class="material-symbols-outlined text-green-600 text-2xl">share</span>
+                </div>
+                <span class="text-[10px] font-bold text-slate-600">الفريق</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-100 flex justify-around items-center py-3 px-2 z-50 pb-safe shadow-[0_-4px_10px_rgba(0,0,0,0.02)]">
+        <a href="index.html" class="flex flex-col items-center gap-1 text-blue-600 font-bold">
+            <span class="material-symbols-outlined font-fill">home</span>
+            <span class="text-[10px]">الرئيسية</span>
+        </a>
+        <a href="tasks.html" class="flex flex-col items-center gap-1 text-gray-400">
+            <span class="material-symbols-outlined">assignment</span>
+            <span class="text-[10px]">المهام</span>
+        </a>
+        <a href="vip.html" class="flex flex-col items-center gap-1 text-gray-400">
+            <span class="material-symbols-outlined">military_tech</span>
+            <span class="text-[10px]">VIP</span>
+        </a>
+        <a href="team.html" class="flex flex-col items-center gap-1 text-gray-400">
+            <span class="material-symbols-outlined">group</span>
+            <span class="text-[10px]">الفريق</span>
+        </a>
+        <a href="profile.html" class="flex flex-col items-center gap-1 text-gray-400">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px]">أنا</span>
+        </a>
+    </nav>
+
+</body>
+</html>
